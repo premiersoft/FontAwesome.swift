@@ -121,13 +121,13 @@ public extension String {
         return self.fontAwesomeIcon(name: name)
     }
 
-    /// Get a FontAwesome icon with the given CSS icon code. Icon code can be found here: http://fontawesome.io/icons/
+    /// Get a FontAwesome icon with the given icon unicode. Icon code can be found here: http://fontawesome.io/icons/
     ///
     /// - parameter code: The preferred icon name.
     /// - returns: An internal corresponding FontAwesome code.
     public static func fontAwesome(code: String) -> FontAwesome? {
-        guard let raw = FontAwesomeIcons[code] else { return nil }
-        return FontAwesome(rawValue: raw)
+        //guard let raw = FontAwesomeIcons[code] else { return nil }
+        return FontAwesome(rawValue: code)
     }
 }
 
